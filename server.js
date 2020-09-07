@@ -23,7 +23,7 @@ mongoose.connect(uri, { useNewUrlParser: true}, { useUnifiedTopology: true })
 const router = require('./routes/exercises');
 // const usersRouter = require('./routes/users');
 
-app.use('/api/exercises', router);
+app.use('/api/exercises/', router);
 // app.use('./users', usersRouter);
 
 const port = process.env.PORT || 3004;
