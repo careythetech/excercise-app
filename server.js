@@ -8,11 +8,11 @@ app.use(cors());
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
-// app.use(express.static(`${__dirname}/client/build`));
+app.use(express.static(`${__dirname}/client/build`));
 
-// app.get('/*', (req, res) => {
-//     res.sendFile(`${__dirname}/client/build/index.html`)
-// });
+app.get('/*', (req, res) => {
+    res.sendFile(`${__dirname}/client/build/index.html`)
+});
 
 const uri = process.env.ATLAS_URI || "mongodb://localhost/mern_excercise";
 mongoose.connect(uri, { useNewUrlParser: true}, { useUnifiedTopology: true })
