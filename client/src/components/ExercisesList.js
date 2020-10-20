@@ -31,7 +31,7 @@ return (
                     </thead>
                     <tbody>
                         {
-                            data.exercises.map(exercise => 
+                            data.exercises.map(exercises => 
                                 <tr key={exercises._id}>
                                     <td>{exercises.username}</td>
                                     <td>{exercises.description}</td>
