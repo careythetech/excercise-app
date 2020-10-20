@@ -3,6 +3,7 @@ import axios from 'axios';
 
 export default function ExercisesList() {
     let [data, setData] = useState([]);
+
     useEffect(() => {
         axios.get('/api/exercises/')
         .then(res => {setData(res.data)})
@@ -31,12 +32,12 @@ return (
                     <tbody>
                         {
                             data.exercises.map(exercise => 
-                                <tr key={exercise._id}>
-                                    <td>{exercise.username}</td>
-                                    <td>{exercise.description}</td>
-                                    <td>{exercise.duration}</td>
-                                    <td>{exercise.date}</td>
-                                    <button className="btn1" onClick={() => deleteItem(exercise._id)}>Delete Exercises</button>
+                                <tr key={exercises._id}>
+                                    <td>{exercises.username}</td>
+                                    <td>{exercises.description}</td>
+                                    <td>{exercises.duration}</td>
+                                    <td>{exercises.date}</td>
+                                    <button className="btn1" onClick={() => deleteItem(exercises._id)}>Delete Exercises</button>
                                 </tr>
                                 
                             )
