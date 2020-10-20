@@ -16,8 +16,8 @@ router.post('/add', (req, res) => {
     });
 });
 
-router.put('/:id', (req, res) => {
-    Exercise.findByIdAndUpdate(req.params.id, req.body)
+router.put('/', (req, res) => {
+    Exercise.update({username: req.body.username}, {$set: req.body})
     .then(() => {
         res.status(200).end();
     });

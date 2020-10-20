@@ -1,30 +1,30 @@
-// const express = require('express');
-// const Excercise = require('../models/Exercise');
-// const usersRouter = express.Router();
+const express = require('express');
+const User= require('../models/User');
+const usersRouter = express.Router();
 
-// usersRouter.get('/', (req, res) => {
-//     Excercise.find().then((users) => {
-//         res.json(users);
-//     });
-// });
+usersRouter.get('/', (req, res) => {
+    User.find().then((users) => {
+        res.json(users);
+    });
+});
 
-// usersRouter.post('/add', (req, res) => {
-//     Exercise.create(req.body).then(() => {
-//         res.status(200).end();
-//     });
-// });
+usersRouter.post('/add', (req, res) => {
+    User.create(req.body).then(() => {
+        res.status(200).end();
+    });
+});
 
-// usersRouter.put('/:id', (req, res) => {
-//     Exercise.findByIdAndUpdate(req.params.id, req.body).then(() => {
-//         res.status(200).end();
-//     });
-// });
+usersRouter.put('/:id', (req, res) => {
+    User.findByIdAndUpdate(req.params.id, req.body).then(() => {
+        res.status(200).end();
+    });
+});
 
-// usersRouter.delete('/:id', (req, res) => {
-//     Exercise.findByIdAndDelete(req.params.id).then(() => {
-//         res.status(200).end();
-//     });
-// });
+usersRouter.delete('/:id', (req, res) => {
+    User.findByIdAndDelete(req.params.id).then(() => {
+        res.status(200).end();
+    });
+});
 
 
-// module.exports = usersRouter;
+module.exports = usersRouter;

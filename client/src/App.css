@@ -1,38 +1,47 @@
-.App {
+body{
+  background: url(https://cdn.hipwallpaper.com/i/64/30/jIciQu.gif) no-repeat center fixed;
+  
+}
+
+h3{
+  color: greenyellow;
   text-align: center;
+  font-family: 'Architects Daughter', cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+td{
+  color: blanchedalmond;
+  font-family: 'Architects Daughter', cursive;
+}
+.thead-light{
+  background: red;
+  font-family: 'Architects Daughter', cursive;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+label{
+  font-family: 'Architects Daughter', cursive;
+  color: blanchedalmond;
+}
+.navbar-brand{
+  color: blanchedalmond;
+  font-family: 'Architects Daughter', cursive;
+}
+.navbar-item{
+  font-family: 'Architects Daughter', cursive;
+  
+}
+.nav-link{
+  color: blanchedalmond !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.btn1{
+  font-family: 'Architects Daughter', cursive;
+  border-radius: 10px;
+  background-color: tan;
+  margin-top: 15px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+tbody{
+  border-radius:50% 20% / 10% 40%;
+  border: tan;
 }
