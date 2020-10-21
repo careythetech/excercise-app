@@ -7,7 +7,7 @@ export default function CreateUser() {
     });
 
     useEffect(()=> {
-        axios.get('http://localhost:3001/api/users/')
+        axios.get('/api/users/')
         .then(res => {
             console.log(res.data)
             setUsers(res.data)

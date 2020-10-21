@@ -3,7 +3,6 @@ import axios from 'axios';
 
 export default function ExercisesList() {
     let [data, setData] = useState([]);
-
     useEffect(() => {
         axios.get('/api/exercises/')
         .then(res => {setData(res.data)})
@@ -12,11 +11,15 @@ export default function ExercisesList() {
 
     const deleteItem = (id) => {
         axios.delete(`/api/exercises/${id}`)
-        .then(res => { window.location = '/' })
+        .then(res => { window.location = '/home' })
     };
+    // const deleteItem = (id) => {
+    //     axios.delete(`/api/covid/${id}`)
+    //     .then(res => { window.location = '/covidsList' })
+    // };
 
 return (
-            <div className="tbody">
+            <div>
                 <h3>Welcome</h3>
                 <table className="table">
                     <thead className="thead-light">
@@ -31,13 +34,13 @@ return (
                     </thead>
                     <tbody>
                         {
-                            data.exercises.map(exercises => 
-                                <tr key={exercises._id}>
-                                    <td>{exercises.username}</td>
-                                    <td>{exercises.description}</td>
-                                    <td>{exercises.duration}</td>
-                                    <td>{exercises.date}</td>
-                                    <button className="btn1" onClick={() => deleteItem(exercises._id)}>Delete Exercises</button>
+                            data.map(exercise => 
+                                <tr key={exercise._id}>
+                                    <td>{exercise.username}</td>
+                                    <td>{exercise.description}</td>
+                                    <td>{exercise.duration}</td>
+                                    <td>{exercise.date}</td>
+                                    <button onClick={() => deleteItem(exercise._id)}>Delete Exercises</button>
                                 </tr>
                                 
                             )

@@ -50,12 +50,12 @@ const handleSubmit = e => {
                         >
                             <option value=''>choose user</option>
                             {
-                                users.map(user=>
+                                users.map(user1=>
                                     <option
-                                        key={user}
-                                        value={user.username}
+                                        key={user1}
+                                        value={user1.username}
                                     >
-                                            {user.username}
+                                            {user1.username}
                                     </option>
                                 )
                             }
